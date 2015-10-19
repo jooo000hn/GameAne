@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/20.0">
+    <!--注意此文件为Demo配置文件，集成主要参考<android>标签下配置内容 -->
+    <id>com.nearme.onlinesdk.demo</id>
+    <filename>ANEDemo</filename>
+    <name>ANEDemo</name>
+    <versionNumber>0.0.0</versionNumber>
+    <initialWindow>
+        <content>ANEDemo.swf</content>
+        <autoOrients>true</autoOrients>
+        <fullScreen>false</fullScreen>
+        <visible>true</visible>
+        <softKeyboardBehavior>none</softKeyboardBehavior>
+    </initialWindow>
+
+<android>
+        <colorDepth>16bit</colorDepth>
+        <manifestAdditions><![CDATA[
+            <manifest android:installLocation="auto">
+               <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.SEND_SMS" />
+        <uses-permission android:name="android.permission.READ_SMS" />
+        <uses-permission android:name="android.permission.WRITE_SMS" />
+        <uses-permission android:name="android.permission.RECEIVE_SMS" />
+        <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+        <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    	  <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+        <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+        <uses-permission android:name="android.permission.VIBRATE" />
+        <uses-permission android:name="android.permission.GET_TASKS" />
+        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22" />
+
+    <application
+        android:allowBackup="true" >
+
+        <!-- nearme game sdk config goes here -->
+ 		<activity
+ 			android:name="com.nearme.game.sdk.component.proxy.ProxyActivity"
+ 			android:configChanges="keyboardHidden|orientation|screenSize"
+ 			android:theme="@style/Theme_Dialog_Custom"
+ 			android:process=":gcsdk">
+ 		</activity>
+ 		<service
+ 			android:name="com.nearme.game.sdk.component.proxy.ProxyApiService"
+ 			android:process=":gcsdk"
+ 			android:priority="1000">
+ 		</service>
+         <receiver
+             android:name="com.nearme.game.sdk.component.proxy.ProxyUserCenterOperateReceiver"
+             android:exported="true"
+             android:process=":gcsdk">
+             <intent-filter>
+                 <action android:name="com.oppo.usercenter.account_login" />
+                 <action android:name="com.oppo.usercenter.account_logout" />
+                 <action android:name="com.oppo.usercenter.modify_name" />
+             </intent-filter>
+         </receiver>
+         <!-- nearme game sdk config end -->
+
+         <!-- 配置渠道初始化参数, 如果在代码中也传递了参数，优先取代码中参数 init start-->
+         <meta-data android:name="appKey" android:value="c5217trjnrmU6gO5jG8VvUFU0" />
+         <meta-data android:name="appSecret" android:value="e2eCa732422245E8891F6555e999878B" />
+         <!-- 是否打开debug开关,是:true 否:false -->
+         <meta-data android:name="debugMode" android:value="false" />
+         <!-- 是否横屏，true为竖屏，false为横屏 -->
+         <meta-data android:name="orientation" android:value="true" />
+         <!-- init end -->
+         
+         <!-- 配置支付参数，优先取代码中参数 pay start -->
+         <!-- CP服务端回调地址 -->
+         <meta-data android:name="notifyUrl" android:value="http://xxx" />
+         <!-- pay end  -->
+
+    </application>
+            </manifest>
+
+        ]]></manifestAdditions>
+    </android>
+    <iPhone>
+        <InfoAdditions><![CDATA[
+            <key>UIDeviceFamily</key>
+            <array>
+                <string>1</string>
+                <string>2</string>
+            </array>
+        ]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+<extensions>
+        <extensionID>com.l1fan.ane.oppo</extensionID>
+    </extensions>
+</application>

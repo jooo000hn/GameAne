@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160" creationComplete="init(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.l1fan.swc.HeTuGameSDK;
+			
+			import mx.events.FlexEvent;
+
+
+			private var chsdk:HeTuGameSDK = new HeTuGameSDK('@ANEID@');
+
+
+			private function statusHandler(e:StatusEvent):void
+			{
+			   switch(e.code){
+			      case HeTuGameSDK.SDK_HETU_INIT:
+			         lbl.text +="[init]"+ e.level;
+			         break;
+			      case HeTuGameSDK.SDK_HETU_UPDATE:
+			         lbl.text +="[update]"+ e.level;
+			         break;
+			      case HeTuGameSDK.SDK_HETU_LOGIN:
+			         lbl.text += "[login]"+e.level;
+			         break;
+			      case HeTuGameSDK.SDK_HETU_LOGOUT:
+			         lbl.text += "[logout]"+e.level;
+			         break;
+			      case HeTuGameSDK.SDK_HETU_PAY:
+			         lbl.text += "[pay]"+e.level;
+			         break;
+			      case HeTuGameSDK.SDK_HETU_ERROR:
+			         lbl.text += "[error]"+e.level;
+			         break;
+			      default:
+			         lbl.text += "[default]"+e.level;
+			   }
+			}
+			
+			protected function init(event:FlexEvent):void
+			{
+                chsdk.addEventListener(StatusEvent.STATUS, statusHandler);
+                var init:Object = new Object();
+                init.appId = "100009";
+                init.appKey = "cZZqE43VLVjUC7YxpnBpnwrZ1NMyfuW6";
+                init.appSecret = "ug2KMdLi2JSr4naOE48XmL3h";
+                chsdk.init();
+								//chsdk.init(JSON.stringify(init));
+			}
+			
+			protected function onLoginClick(event:MouseEvent):void
+			{
+				chsdk.userLogin();
+			}
+			
+			protected function onPayClick(event:MouseEvent):void
+			{
+			    var pay:Object = new Object();
+			    //pay.qihooUid = 377351739;
+			    //pay.payID="100087"
+			    //pay.uname = "xxx";
+			    //pay.uid = "xxx";	
+//					03-07 22:18:40.561: I/System.out(31294): action->pay data->{"appName":"生存者游戏","ext2":1,"uname":"玩家30560","ext":30560,"uid":121443,"amount":600,"notifyUrl":"http://china8.client.gamehetu.com/order/complete?plat=youku&zone=China&gameid=8","pname":"60钻石","pid":"com.gamehetu.163.205122","orderId":"104441","qihooUid":"9890046"}
+// http://china8.client.gamehetu.com/order/complete?plat=youku&zone=China&gameid=8
+// pay.notifyUrl="http://china8.client.gamehetu.com/order/complete?plat=youku&gameid=8";
+			    pay.amount = "100";
+			    pay.pname = "10钻石";
+			    pay.pid = "com.gamehtsdf.sdf";
+			    pay.orderId = "o"+new Date().time ;
+			    pay.ext = 30560;
+				chsdk.pay(JSON.stringify(pay));
+			}
+			
+			protected function onSwitchClick(event:MouseEvent):void
+			{
+			    chsdk.call('switchAccount');
+			}
+			
+			protected function onUCenterClick(event:MouseEvent):void
+			{
+				chsdk.userCenter();
+			}
+			
+			protected function onLogoutClick(event:MouseEvent):void
+			{
+				chsdk.userLogout();
+			}
+			
+			protected function onExitGameClick(event:MouseEvent):void
+			{
+				chsdk.call('destroy');
+			}
+			
+			protected function onToolbarClick_show(event:MouseEvent):void
+			{
+				chsdk.call('toolBarShow');
+			}
+
+			protected function onToolbarClick_hide(event:MouseEvent):void
+			{
+				chsdk.call('toolBarHide');				
+			}
+
+			protected function onDebugClick(event:MouseEvent):void
+			{
+				lbl.text = "[isSupportUC]" + chsdk.isSupportUserCenter();
+				lbl.text += "[isSupportLogout]"+chsdk.isSupportUserLogout();
+			}
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	
+	<s:VGroup width="100%" height="100%" verticalAlign="middle" horizontalAlign="center">       
+		<s:Label text="Hello, World!" id="lbl" width="85%" /> 
+		<s:Button label="登录" click="onLoginClick(event)" styleName="next"/>   
+		<s:Button label="支付" click="onPayClick(event)" styleName="next"/>   
+		<s:Button label="切换账号" click="onSwitchClick(event)" styleName="next"/>   
+		<s:Button label="用户中心" click="onUCenterClick(event)" styleName="next"/>   
+		<s:Button label="用户退出" click="onLogoutClick(event)" styleName="next"/>
+		<s:Button label="退出游戏" click="onExitGameClick(event)" styleName="next"/>
+		<s:Button label="显示工具栏" click="onToolbarClick_show(event)" styleName="next"/>
+		<s:Button label="隐藏工具栏" click="onToolbarClick_hide(event)" styleName="next"/>   
+		<s:Button label="是否支持" click="onDebugClick(event)" styleName="next"/>   
+
+	</s:VGroup>
+</s:Application>

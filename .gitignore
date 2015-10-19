@@ -1,0 +1,8 @@
+.DS_Store
+.svn
+
+*.ane
+bin/
+temp/
+
+build.config
