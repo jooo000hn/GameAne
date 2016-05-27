@@ -104,8 +104,12 @@
 
 			protected function onDebugClick(event:MouseEvent):void
 			{
-				lbl.text = "[isSupportUC]" + chsdk.isSupportUserCenter();
+				lbl.text += "[isSupportUC]" + chsdk.isSupportUserCenter();
 				lbl.text += "[isSupportLogout]"+chsdk.isSupportUserLogout();
+				lbl.text += "[getAdID]"+chsdk.call("getAdID");
+				lbl.text += "[getAppsFlyerUID]"+chsdk.call("getAppsFlyerUID");
+				lbl.text += "[isAdEnable]"+chsdk.call("isAdEnable");
+
 			}
 		]]>
 	</fx:Script>
