@@ -5,6 +5,8 @@ import java.util.HashMap;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import android.os.Bundle;
+
 import com.l1fan.ane.SDKContext;
 import com.sogou.gamecenter.sdk.SogouGamePlatform;
 import com.sogou.gamecenter.sdk.bean.SogouGameConfig;
@@ -19,16 +21,18 @@ import com.sogou.gamecenter.sdk.views.FloatMenu;
 public class SDK extends SDKContext {
 
 	private SogouGamePlatform mInstance;
+	protected FloatMenu mFm;
 
 	public void init() throws JSONException {
 		JSONObject json = getJsonData();
+		Bundle md = getMetaData();
 		mInstance = SogouGamePlatform.getInstance();
 
 		SogouGameConfig gameConfig = new SogouGameConfig();
-		gameConfig.devMode = json.optBoolean(DEBUGMODE,false);
-		gameConfig.gid = json.optInt(APPID);
+		gameConfig.devMode = json.optBoolean(DEBUGMODE,md.getBoolean("devMode",false));
+		gameConfig.gid = json.optInt(APPID,json.optInt("gid",(int) md.get("gid")));
 		gameConfig.gameName = getAppName();
-		gameConfig.appKey = json.optString(APPKEY);
+		gameConfig.appKey = json.optString(APPKEY, md.getString(APPKEY));
 
 		mInstance.prepare(getActivity(), gameConfig);
 		mInstance.init(getActivity(), new InitCallbackListener() {
@@ -36,15 +40,10 @@ public class SDK extends SDKContext {
 			@Override
 			public void initSuccess() {
 				dispatchData(EVENT_INIT);
-				//createFloatBall();
+				mFm = mInstance.createFloatMenu(getActivity(), false);
+				mFm.setParamsXY(10, 100);
 			}
 
-			private void createFloatBall() {
-				FloatMenu fm = mInstance.createFloatMenu(getActivity(), false);
-				fm.setParamsXY(10, 100);
-				fm.show();
-				fm.setSwitchUserListener(switchAccountListener);
-			}
 
 			@Override
 			public void initFail(int arg0, String arg1) {
@@ -60,6 +59,8 @@ public class SDK extends SDKContext {
 			@Override
 			public void loginSuccess(int code, UserInfo userInfo) {
 				loginSucc(userInfo);
+				mFm.show();
+				mFm.setSwitchUserListener(switchAccountListener);
 			}
 
 			@Override
@@ -128,6 +129,7 @@ public class SDK extends SDKContext {
 			@Override
 			public void onCompleted() {
 				dispatchData(EVENT_LOGOUT);
+				mFm.hide();
 			}
 		});
 	}
