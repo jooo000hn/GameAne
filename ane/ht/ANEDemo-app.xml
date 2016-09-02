@@ -120,7 +120,7 @@
         </activity>
         
         <!-- 配置appId, 如果在代码中也传递了参数，优先取代码中参数 init start-->
-        <meta-data android:name="appId" android:value="" />
+        <meta-data android:name="appId" android:value="100000" />
         <!-- 配置渠道 -->
         <meta-data android:name="channel" android:value="" />
 
@@ -157,34 +157,69 @@
     <iPhone>
         <InfoAdditions>
       <![CDATA[<key>UIDeviceFamily</key><array><string>1</string><string>2</string></array>
-      <key>CFBundleURLTypes</key>
-      <array>
+    
+     <key>LSApplicationQueriesSchemes</key>
+     <array>
+       <string>fbauth2</string> 
+     </array>
+     
+     <key>NSAppTransportSecurity</key> 
+     <dict>
+        <key>NSExceptionDomains</key> 
         <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>ZHPAY-com.phoenix.zombie.ios.haima</string>
-            </array>
-            <key>CFBundleURLName</key>
-            <string>ZHPAY-com.phoenix.zombie.ios.haima</string>
+          <key>akamaihd.net</key>
+    			<dict>
+    				<key>NSIncludesSubdomains</key>
+    				<true/>
+    				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    				<false/>
+    			</dict>
+    			<key>facebook.com</key>
+    			<dict>
+    				<key>NSIncludesSubdomains</key>
+    				<true/>
+    				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    				<false/>
+    			</dict>
+    			<key>fbcdn.net</key>
+    			<dict>
+    				<key>NSIncludesSubdomains</key>
+    				<true/>
+    				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    				<false/>
+    			</dict>
+    			<key>gamehetu.com</key>
+    			<dict>
+    				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+    				<true/>
+    				<key>NSIncludesSubdomains</key>
+    				<true/>
+    				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    				<false/>
+    			</dict>
         </dict>
-    </array>
-    <key>LSApplicationQueriesSchemes</key>
-  	<array>
-  		<string>alipay</string>
-  		<string>safepay</string>
-  		<string>haima</string>
-  		<string>haimavip</string>
-  		<string>haimavipipad</string>
-  	</array>
-    <key>NSAppTransportSecurity</key>
-  	<dict>
-  		<key>NSAllowsArbitraryLoads</key>
-  		<true/>
   	</dict>
-    <key>UIRequiredDeviceCapabilities</key>
-  	<array>
-  		<string>armv7</string>
-  	</array>
+    
+    <!-- 将下面的facebook id替换为自己的id -->
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <string>fb903157366448932</string>
+          </array>
+      </dict>
+   </array>
+    <key>FacebookAppID</key> 
+    <string>903157366448932</string> 
+    <key>FacebookDisplayName</key> 
+    <string>GameHeTu</string>
+    
+    <!-- 配置平台appid和channel,优先取代码中传递的参数 -->
+    <key>appId</key>
+    <string>100000</string>
+    <key>channel</key>
+    <string></string>
 
     ]]>
           </InfoAdditions>
