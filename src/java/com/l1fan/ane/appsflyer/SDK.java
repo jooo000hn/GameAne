@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.os.Bundle;
 
 import com.appsflyer.AppsFlyerLib;
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
@@ -22,9 +23,10 @@ public class SDK extends SDKContext {
 
 	public void init() throws JSONException {
 		JSONObject init = getJsonData();
-		AppsFlyerLib.setAppsFlyerKey(init.optString("devKey","kFZnPcRtTVMmje5YeX5dAX"));
-		AppsFlyerLib.sendTracking(getActivity());
 		final Activity activity = getActivity();
+		Bundle md = getMetaData();
+		AppsFlyerLib.getInstance().startTracking(activity.getApplication(),init.optString("devKey",md.getString("AppsFlyerDevKey")));
+
 		new Thread(new Runnable() {
 			
 			@Override
@@ -42,8 +44,6 @@ public class SDK extends SDKContext {
 				}	
 			}
 		}).start();
-		
-
 	}
 	
 	public void track() throws JSONException{
@@ -59,11 +59,11 @@ public class SDK extends SDKContext {
 		}
 		
 		System.out.println("type ->"+type+";eventValues->"+map.toString());
-		AppsFlyerLib.trackEvent(getActivity(), type, map);
+		AppsFlyerLib.getInstance().trackEvent(getActivity(), type, map);
 	}
 	
 	public String getAppsFlyerUID(){
-		return AppsFlyerLib.getAppsFlyerUID(getActivity());
+		return AppsFlyerLib.getInstance().getAppsFlyerUID(getActivity());
 	}
 	
 	public String getAdID(){
