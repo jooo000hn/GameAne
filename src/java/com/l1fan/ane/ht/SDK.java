@@ -42,7 +42,7 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 		context = this;
 		JSONObject json = getJsonData();
 		Bundle md = getMetaData();
-		mAppId = json.optString(APPID, md.getString(APPID,""));
+		mAppId = json.optString(APPID, String.valueOf(md.getInt(APPID,0)));
 		mChannel = json.optString("channel",md.getString("channel",""));
 		HTSdk.sdkInitialize(getActivity(), mAppId, mChannel);
 		HtLoginManager.getInstance().setLoginListener(new HeTuCallback<LoginBean>() {
