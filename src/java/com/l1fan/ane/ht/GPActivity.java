@@ -61,6 +61,7 @@ public class GPActivity extends Activity {
 		if (GooglePay.onActivityResult(requestCode, resultCode, data)) {
 			super.onActivityResult(requestCode, resultCode, data);
 		}
+		finish();
 	}
 
 }
