@@ -33,8 +33,8 @@ import com.l1fan.ane.SDKContext;
 public class SDK extends SDKContext implements IabBroadcastListener {
 
 	static String mAppId;
-	static String mCooServer;
-	static String mCooUid;
+	static String mCooServer = "";
+	static String mCooUid = "";
 	static String mChannel;
 	static SDKContext context;
 
