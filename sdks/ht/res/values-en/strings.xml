@@ -5,7 +5,6 @@
     <string name="agreement_tip">Please agree to TermofService and PrivacyPolicy</string>
     <string name="already_bind">This email address has already been taken</string>
     <string name="and"> and </string>
-    <string name="app_name">HtLoginSdk</string>
     <string name="bind">Bind Account</string>
     <string name="bind_fail">Failed. please try again</string>
     <string name="bind_name_empty">Please choose an account first</string>

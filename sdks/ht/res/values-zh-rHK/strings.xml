@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HtLoginSdk</string>
     <string name="action_settings">Settings</string>
     <string name="login_account_edit_hint">請輸入用戶郵箱</string>
     <string name="login_password_edit_hint">請輸入使用者密碼</string>
