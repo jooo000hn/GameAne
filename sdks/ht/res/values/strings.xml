@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="app_name">登录sdk</string>
 
     <!-- toast -->
     <string name="login_success_tip">登录成功！！</string>
