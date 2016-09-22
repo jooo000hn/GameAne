@@ -101,16 +101,11 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 			
 			@Override
 			public void onIabSetupFinished(IabResult result) {
-				if (result.isSuccess()) {
-					System.out.println("cb: GooglePay.init success");
-					dispatchData(EVENT_INIT);
-				}else{
-					dispatchError(EVENT_INIT, result.getMessage());
-				}
+				System.out.println("--> GooglePay.init finished ");
+				System.out.println(result.toString());
 			}
 		});
         
-		System.out.println("dr: GooglePay.init success ");
 		dispatchData(EVENT_INIT);
 
 	}
