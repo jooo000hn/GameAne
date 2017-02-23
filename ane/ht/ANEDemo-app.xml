@@ -125,8 +125,8 @@
         <!-- 配置渠道 -->
         <meta-data android:name="channel" android:value="" />
 
-        <!-- 
-        1. 统计接口需在登录成功后，创建或登录角色时调用，否则会影响支付操作
+        <!-- 调用方法Android和iOS相同
+        1. 统计接口
               var o:Object = new Object();
               o.type = "reg";     // log/reg分别指已创建和未创建角色
               o.version = "";     // 版本  ？  
@@ -134,13 +134,13 @@
               o.coo_uid = "";     // 角色id
               sdk.call("track",JSON.stringify(o));
               
-        2. facebook邀请好友方法
+        2. facebook邀请好友方法，结果响应事件 FB_INVITE
               var o:Object = new Object();
               o.title = "xxx";      
               o.message = "xxxx";
               sdk.call("invite",JSON.stringify(o));
               
-        3. facebook分享方法
+        3. facebook分享方法，结果响应事件 FB_SHARE
               var o:Object = new Object();
               o.title = "xxx";      
               o.message = "xxxx";
@@ -161,7 +161,10 @@
     
      <key>LSApplicationQueriesSchemes</key>
      <array>
+       <string>fbapi</string> 
+       <string>fb-messenger-api</string> 
        <string>fbauth2</string> 
+       <string>fbshareextension</string>
      </array>
      
      <key>NSAppTransportSecurity</key> 
@@ -201,16 +204,37 @@
         </dict>
   	</dict>
     
-    <!-- 将下面的facebook id替换为自己的id -->
+    <!-- 设置默认语言 -->
+    <key>CFBundleDevelopmentRegion</key> 
+    <string>en</string>
+    
+     <!-- 填写facebook的accountKIT,从facebook开发者平台获取 -->
+    <key>AccountKitClientToken</key>
+    <string>0708793081ca9d82514fec02e78b3d5e</string>
+    
     <key>CFBundleURLTypes</key>
     <array>
       <dict>
           <key>CFBundleURLSchemes</key>
           <array>
+              <!-- 将下面的facebook id和accountKIT id替换为自己的id -->
               <string>fb903157366448932</string>
+              <string>ak298691543862147</string>
           </array>
       </dict>
-   </array>
+      <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <!-- 打包ane前先到google后台下载配置文件https://developers.google.com/mobile/add?platform=ios，选择和使用对应的游戏的配置和包名。放在与ane项目的sdks/ht_ios目录下 -->
+              <!-- 从谷歌的配置文件中获取的REVERSED_CLIENT_ID -->
+              <string>com.googleusercontent.apps.1047879244101-ab7hk0r62dq3oqjk6jpmp6knimk4p2un</string>
+          </array>
+      </dict>
+    </array>
+    <!-- 从谷歌的配置文件中获取的CLIENT_ID -->
+    <key>clientID</key>
+    <string>1047879244101-ab7hk0r62dq3oqjk6jpmp6knimk4p2un.apps.googleusercontent.com</string>
+    <!-- facebook id -->
     <key>FacebookAppID</key> 
     <string>903157366448932</string> 
     <key>FacebookDisplayName</key> 
@@ -219,11 +243,32 @@
     <!-- 配置平台appid和channel,优先取代码中传递的参数 -->
     <key>appId</key>
     <string>100000</string>
+    <!-- 手机号国家代码，只需数字 -->
+    <key>countryNumber</key>
+    <string>86</string>
     <key>channel</key>
     <string></string>
 
     ]]>
           </InfoAdditions>
+          <Entitlements> 
+            <![CDATA[ 
+               <!-- 下面三个权限需要在apple后台开启生效 -->
+               <!-- 推送设置 Push Notification，production为生产环境，development为开发环境 -->
+               <!-- <key>aps-environment</key> 
+               <string>production</string>  -->
+               <!-- 游戏中心Game Center -->
+               <!-- <key>com.apple.developer.game-center</key>
+               <true/> -->
+               <!-- keychains sharing -->
+               <key>keychain-access-groups</key>
+                <array>
+                 <!-- 修改包名，前缀prefix 9YFX35TJ5Y 修改为自己开发者证书的team id，也可以直接到后台App IDs中查找到prefix https://developer.apple.com/account/ios/certificate -->
+                 <string>9YFX35TJ5Y.com.ht.htloginsdk.demo</string>
+               </array>
+            ]]> 
+         </Entitlements> 
+          
         <requestedDisplayResolution>high</requestedDisplayResolution>
     </iPhone>
 <extensions>

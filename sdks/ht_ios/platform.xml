@@ -34,12 +34,27 @@ either expressed or implied, of the FreeBSD Project.
     <linkerOptions>
         <option>-ios_version_min 6.0</option>
         <option>-lz</option>
+        <option>-framework ImageIO</option>
         <option>-framework AdSupport</option>
+        <option>-framework MobileCoreServices</option>
+        <option>-framework AddressBook</option>
+        <option>-framework SafariServices</option>
+        <option>-framework SystemConfiguration</option>
+        <option>-framework GameKit</option>
+
     </linkerOptions>
     <packagedDependencies>
         <packagedDependency>FBSDKCoreKit.framework</packagedDependency>
         <packagedDependency>FBSDKLoginKit.framework</packagedDependency>
         <packagedDependency>FBSDKShareKit.framework</packagedDependency>
+        <packagedDependency>FBNotifications.framework</packagedDependency>
+        <packagedDependency>Bolts.framework</packagedDependency>
+        <packagedDependency>AccountKit.framework</packagedDependency>
+        <packagedDependency>FBSDKMessengerShareKit.framework</packagedDependency>
+        <packagedDependency>GoogleSignIn.framework</packagedDependency>
+        <packagedDependency>GoogleSignInDependencies.framework</packagedDependency>
+        <packagedDependency>GoogleAppUtilities.framework</packagedDependency>
+        <packagedDependency>GoogleSymbolUtilities.framework</packagedDependency>
         <packagedDependency>HTSDK.framework</packagedDependency>
 
     </packagedDependencies>
