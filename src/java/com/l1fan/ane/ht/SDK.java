@@ -63,7 +63,9 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 						e.printStackTrace();
 					}
 					dispatchData(EVENT_LOGIN, obj);
-				}else{
+				}else if (info.getCode() == 2) {
+					dispatchData(EVENT_LOGOUT, info.getMsg());
+				}else {
 					dispatchError(EVENT_LOGIN, info.getCode()+":"+info.getMsg());
 				}
 			}
@@ -86,6 +88,8 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 			}
 		});
 		
+		FacebookUtils.getInstance().onCreate();
+		
 		GooglePay.init(getActivity(),this, new InitQueryHandler() {
 			
 			@Override
@@ -94,6 +98,8 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 				System.out.println(result.toString());
 			}
 		});
+		
+		
         
 		dispatchData(EVENT_INIT);
 
@@ -132,8 +138,7 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 		JSONObject json = getJsonData();
 		String title = json.optString("title");
 		String msg = json.optString("message");
-		FacebookUtils fbu = new FacebookUtils();
-		fbu.facebookInvite(getActivity(), title, msg, new FacebookCallbackResult<GameRequestDialog.Result>() {
+		FacebookUtils.getInstance().facebookInvite(getActivity(), title, msg, new FacebookCallbackResult<GameRequestDialog.Result>() {
 			
 			@Override
 			public void onSuccess(Result paramT) {
@@ -158,7 +163,7 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 		String desStr = json.optString("message");
 		String linkString = json.optString("linkurl");
 		String pictureString = json.optString("pictureurl");
-		new FacebookUtils().facebookShare(getActivity(), captionStr, desStr, linkString, pictureString, new FacebookCallbackResult<Sharer.Result>() {
+		FacebookUtils.getInstance().facebookShare(getActivity(), captionStr, desStr, linkString, pictureString, new FacebookCallbackResult<Sharer.Result>() {
 			
 			@Override
 			public void onSuccess(com.facebook.share.Sharer.Result paramResult) {

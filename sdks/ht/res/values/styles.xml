@@ -50,8 +50,28 @@
         <item name="android:textColorHint">?android:textColorHintInverse</item>
     </style>
     <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V7.Theme.AppCompat.Dialog" />
+    <style name="Base.Theme.AppCompat.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.Theme.AppCompat.Light.Dialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog" />
+    <style name="Base.Theme.AppCompat.Light.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Light.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Light.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Light.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog">
+        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.Widget.AppCompat.ProgressBar" parent="@android:style/Widget.ProgressBar">
         <item name="android:maxWidth">@dimen/abc_action_bar_progress_bar_size</item>
         <item name="android:maxHeight">@dimen/abc_action_bar_progress_bar_size</item>
@@ -71,7 +91,7 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
@@ -81,7 +101,7 @@
         <item name="android:windowBackground">@color/background_material_dark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
         <item name="android:textColorLink">?colorAccent</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
@@ -105,7 +125,7 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
@@ -115,7 +135,7 @@
         <item name="android:windowBackground">@color/background_material_light</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
         <item name="android:textColorLink">?colorAccent</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
@@ -136,6 +156,14 @@
         <item name="android:textSize">@dimen/abc_text_size_button_material</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="textAllCaps">true</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification" parent="@style/TextAppearance.AppCompat">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Title" parent="@style/TextAppearance.AppCompat.Notification">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
     </style>
     <style name="TextAppearance.StatusBar.EventContent" parent="" />
     <style name="TextAppearance.StatusBar.EventContent.Info" parent="" />
@@ -355,7 +383,7 @@
         <item name="android:background">@drawable/abc_btn_borderless_material</item>
     </style>
     <style name="Base.Widget.AppCompat.Button.Borderless.Colored" parent="@style/Base.Widget.AppCompat.Button.Borderless">
-        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored</item>
     </style>
     <style name="Base.Widget.AppCompat.Button.Small" parent="@style/Base.Widget.AppCompat.Button">
         <item name="android:minWidth">48.0dip</item>
@@ -464,6 +492,20 @@
         <item name="actionDropDownStyle">@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar</item>
         <item name="selectableItemBackground">@drawable/abc_item_background_holo_light</item>
     </style>
+    <style name="TextAppearance.AppCompat.Notification.Info" parent="@style/TextAppearance.AppCompat.Notification">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Info.Media" parent="@style/TextAppearance.AppCompat.Notification.Info" />
+    <style name="TextAppearance.AppCompat.Notification.Media" parent="@style/TextAppearance.AppCompat.Notification" />
+    <style name="TextAppearance.AppCompat.Notification.Time" parent="@style/TextAppearance.AppCompat.Notification">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Time.Media" parent="@style/TextAppearance.AppCompat.Notification.Time" />
+    <style name="TextAppearance.AppCompat.Notification.Title.Media" parent="@style/TextAppearance.AppCompat.Notification.Title" />
+    <style name="Widget.AppCompat.NotificationActionContainer" parent="" />
+    <style name="Widget.AppCompat.NotificationActionText" parent="" />
     <style name="Widget.Design.AppBarLayout" parent="@style/Base.Widget.Design.AppBarLayout" />
     <style name="Base.TextAppearance.AppCompat.Widget.ActionBar.Menu" parent="@style/TextAppearance.AppCompat.Button">
         <item name="android:textColor">?actionMenuTextColor</item>
@@ -473,7 +515,7 @@
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
     </style>
     <style name="Base.Widget.AppCompat.Button.Colored" parent="@style/Base.Widget.AppCompat.Button">
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.Button.Inverse</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.Button.Colored</item>
         <item name="android:background">@drawable/abc_btn_colored_material</item>
     </style>
     <style name="Base.Widget.AppCompat.RatingBar.Indicator" parent="@android:style/Widget.RatingBar">
@@ -491,6 +533,13 @@
         <item name="android:minHeight">16.0dip</item>
         <item name="android:thumb">@null</item>
         <item name="android:isIndicator">true</item>
+    </style>
+    <style name="CardView" parent="@style/Base.CardView" />
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textColor">@color/abc_btn_colored_borderless_text_material</item>
+    </style>
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textColor">@color/abc_btn_colored_text_material</item>
     </style>
     <style name="AccountKit.ActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="android:background">?com_accountkit_header_background_color</item>
@@ -604,6 +653,13 @@
         <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>
         <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
     </style>
+    <style name="Base.CardView" parent="@android:style/Widget">
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
     <style name="Base.DialogWindowTitle.AppCompat" parent="@android:style/Widget">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
         <item name="android:maxLines">1</item>
@@ -680,19 +736,11 @@
         <item name="android:windowAnimationStyle">@style/Animation.AppCompat.DropDownUp</item>
         <item name="android:itemTextAppearance">?android:textAppearanceMedium</item>
     </style>
-    <style name="Base.Theme.AppCompat.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
-    </style>
     <style name="Base.Theme.AppCompat.Dialog.FixedSize" parent="@style/Base.Theme.AppCompat.Dialog">
         <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
         <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
         <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
         <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
-    </style>
-    <style name="Base.Theme.AppCompat.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.Theme.AppCompat.Light.DarkActionBar" parent="@style/Base.Theme.AppCompat.Light">
         <item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
@@ -702,19 +750,11 @@
         <item name="colorPrimary">@color/primary_material_dark</item>
         <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
     </style>
-    <style name="Base.Theme.AppCompat.Light.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Light.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
-    </style>
     <style name="Base.Theme.AppCompat.Light.Dialog.FixedSize" parent="@style/Base.Theme.AppCompat.Light.Dialog">
         <item name="windowFixedWidthMajor">@dimen/abc_dialog_fixed_width_major</item>
         <item name="windowFixedHeightMinor">@dimen/abc_dialog_fixed_height_minor</item>
         <item name="windowFixedWidthMinor">@dimen/abc_dialog_fixed_width_minor</item>
         <item name="windowFixedHeightMajor">@dimen/abc_dialog_fixed_height_major</item>
-    </style>
-    <style name="Base.Theme.AppCompat.Light.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Light.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.ThemeOverlay.AppCompat" parent="@style/Platform.ThemeOverlay.AppCompat" />
     <style name="Base.ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat">
@@ -729,10 +769,10 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
         <item name="android:windowBackground">@color/background_material_dark</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
         <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_light</item>
@@ -742,14 +782,11 @@
         <item name="colorControlHighlight">@color/ripple_material_dark</item>
         <item name="colorButtonNormal">@color/button_material_dark</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_dark</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_dark</item>
     </style>
     <style name="Base.ThemeOverlay.AppCompat.Dark.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.Dark">
         <item name="searchViewStyle">@style/Widget.AppCompat.SearchView.ActionBar</item>
         <item name="colorControlNormal">?android:textColorPrimary</item>
-    </style>
-    <style name="Base.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog">
-        <item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
     </style>
     <style name="Base.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat.Light">
         <item name="android:colorForeground">@color/foreground_material_light</item>
@@ -759,10 +796,10 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
         <item name="android:windowBackground">@color/background_material_light</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>
         <item name="android:textColorTertiaryInverse">@color/abc_secondary_text_material_dark</item>
@@ -773,6 +810,7 @@
         <item name="colorControlHighlight">@color/ripple_material_light</item>
         <item name="colorButtonNormal">@color/button_material_light</item>
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
+        <item name="colorBackgroundFloating">@color/background_floating_material_light</item>
     </style>
     <style name="Base.V7.Theme.AppCompat" parent="@style/Platform.AppCompat">
         <item name="android:panelBackground">@android:color/transparent</item>
@@ -786,10 +824,10 @@
         <item name="windowNoTitle">false</item>
         <item name="windowActionBarOverlay">false</item>
         <item name="windowActionModeOverlay">false</item>
-        <item name="windowFixedWidthMajor">0.0dip</item>
-        <item name="windowFixedHeightMinor">0.0dip</item>
-        <item name="windowFixedWidthMinor">0.0dip</item>
-        <item name="windowFixedHeightMajor">0.0dip</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+        <item name="windowFixedHeightMajor">@null</item>
         <item name="actionBarTabStyle">@style/Widget.AppCompat.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.ActionBar.TabText</item>
@@ -918,10 +956,10 @@
         <item name="windowNoTitle">false</item>
         <item name="windowActionBarOverlay">false</item>
         <item name="windowActionModeOverlay">false</item>
-        <item name="windowFixedWidthMajor">0.0dip</item>
-        <item name="windowFixedHeightMinor">0.0dip</item>
-        <item name="windowFixedWidthMinor">0.0dip</item>
-        <item name="windowFixedHeightMajor">0.0dip</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+        <item name="windowFixedHeightMajor">@null</item>
         <item name="actionBarTabStyle">@style/Widget.AppCompat.Light.ActionBar.TabView</item>
         <item name="actionBarTabBarStyle">@style/Widget.AppCompat.Light.ActionBar.TabBar</item>
         <item name="actionBarTabTextStyle">@style/Widget.AppCompat.Light.ActionBar.TabText</item>
@@ -1053,6 +1091,10 @@
         <item name="android:colorBackgroundCacheHint">@null</item>
         <item name="windowActionBar">false</item>
         <item name="windowActionModeOverlay">true</item>
+        <item name="windowFixedWidthMajor">@null</item>
+        <item name="windowFixedHeightMinor">@null</item>
+        <item name="windowFixedWidthMinor">@null</item>
+        <item name="windowFixedHeightMajor">@null</item>
         <item name="listPreferredItemPaddingLeft">24.0dip</item>
         <item name="listPreferredItemPaddingRight">24.0dip</item>
     </style>
@@ -1114,7 +1156,6 @@
     <style name="Base.Widget.AppCompat.Button.ButtonBar.AlertDialog" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
         <item name="android:minWidth">64.0dip</item>
         <item name="android:minHeight">@dimen/abc_alert_dialog_button_bar_height</item>
-        <item name="android:maxLines">2</item>
     </style>
     <style name="Base.Widget.AppCompat.ButtonBar.AlertDialog" parent="@style/Base.Widget.AppCompat.ButtonBar" />
     <style name="Base.Widget.AppCompat.CompoundButton.Switch" parent="@android:style/Widget.CompoundButton">
@@ -1196,19 +1237,26 @@
         <item name="tabPaddingStart">12.0dip</item>
         <item name="tabPaddingEnd">12.0dip</item>
     </style>
-    <style name="CardView">
-        <item name="cardBackgroundColor">@color/cardview_light_background</item>
-        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
-        <item name="cardElevation">@dimen/cardview_default_elevation</item>
-        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
-        <item name="cardUseCompatPadding">false</item>
-        <item name="cardPreventCornerOverlap">true</item>
-    </style>
     <style name="CardView.Dark" parent="@style/CardView">
         <item name="cardBackgroundColor">@color/cardview_dark_background</item>
     </style>
     <style name="CardView.Light" parent="@style/CardView">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <style name="CastExpandedController">
+        <item name="castSeekBarProgressDrawable">@drawable/cast_expanded_controller_seekbar_track</item>
+        <item name="castSeekBarThumbDrawable">@drawable/cast_expanded_controller_seekbar_thumb</item>
+        <item name="castControlButtons">@array/cast_expanded_controller_default_control_buttons</item>
+        <item name="castButtonColor">@null</item>
+        <item name="castPlayButtonDrawable">@drawable/cast_ic_expanded_controller_play</item>
+        <item name="castPauseButtonDrawable">@drawable/cast_ic_expanded_controller_pause</item>
+        <item name="castStopButtonDrawable">@drawable/cast_ic_expanded_controller_stop</item>
+        <item name="castSkipPreviousButtonDrawable">@drawable/cast_ic_expanded_controller_skip_previous</item>
+        <item name="castSkipNextButtonDrawable">@drawable/cast_ic_expanded_controller_skip_next</item>
+        <item name="castRewind30ButtonDrawable">@drawable/cast_ic_expanded_controller_rewind30</item>
+        <item name="castForward30ButtonDrawable">@drawable/cast_ic_expanded_controller_forward30</item>
+        <item name="castMuteToggleButtonDrawable">@drawable/cast_ic_expanded_controller_mute</item>
+        <item name="castClosedCaptionsButtonDrawable">@drawable/cast_ic_expanded_controller_closed_caption</item>
     </style>
     <style name="CastIntroOverlay">
         <item name="castBackgroundColor">@color/cast_intro_overlay_background_color</item>
@@ -1222,6 +1270,26 @@
         <item name="castTitleTextAppearance">@style/TextAppearance.CastMiniController.Title</item>
         <item name="castShowImageThumbnail">true</item>
         <item name="castSubtitleTextAppearance">@style/TextAppearance.CastMiniController.Subtitle</item>
+        <item name="castControlButtons">@array/cast_mini_controller_default_control_buttons</item>
+        <item name="castBackground">?android:colorBackground</item>
+        <item name="castButtonColor">@null</item>
+        <item name="castPlayButtonDrawable">@drawable/cast_ic_mini_controller_play</item>
+        <item name="castPauseButtonDrawable">@drawable/cast_ic_mini_controller_pause</item>
+        <item name="castStopButtonDrawable">@drawable/cast_ic_mini_controller_stop</item>
+        <item name="castLargePlayButtonDrawable">@drawable/cast_ic_mini_controller_play_large</item>
+        <item name="castLargePauseButtonDrawable">@drawable/cast_ic_mini_controller_pause_large</item>
+        <item name="castLargeStopButtonDrawable">@drawable/cast_ic_mini_controller_stop_large</item>
+        <item name="castSkipPreviousButtonDrawable">@drawable/cast_ic_mini_controller_skip_prev</item>
+        <item name="castSkipNextButtonDrawable">@drawable/cast_ic_mini_controller_skip_next</item>
+        <item name="castRewind30ButtonDrawable">@drawable/cast_ic_mini_controller_rewind30</item>
+        <item name="castForward30ButtonDrawable">@drawable/cast_ic_mini_controller_forward30</item>
+        <item name="castMuteToggleButtonDrawable">@drawable/cast_ic_mini_controller_mute</item>
+        <item name="castClosedCaptionsButtonDrawable">@drawable/cast_ic_mini_controller_closed_caption</item>
+    </style>
+    <style name="CustomCastTheme">
+        <item name="castIntroOverlayStyle">@style/CastIntroOverlay</item>
+        <item name="castMiniControllerStyle">@style/CastMiniController</item>
+        <item name="castExpandedControllerStyle">@style/CastExpandedController</item>
     </style>
     <style name="Dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -1312,6 +1380,8 @@
     <style name="TextAppearance.AppCompat.Medium" parent="@style/Base.TextAppearance.AppCompat.Medium" />
     <style name="TextAppearance.AppCompat.Medium.Inverse" parent="@style/Base.TextAppearance.AppCompat.Medium.Inverse" />
     <style name="TextAppearance.AppCompat.Menu" parent="@style/Base.TextAppearance.AppCompat.Menu" />
+    <style name="TextAppearance.AppCompat.Notification.Line2" parent="@style/TextAppearance.AppCompat.Notification.Info" />
+    <style name="TextAppearance.AppCompat.Notification.Line2.Media" parent="@style/TextAppearance.AppCompat.Notification.Info.Media" />
     <style name="TextAppearance.AppCompat.SearchResult.Subtitle" parent="@style/Base.TextAppearance.AppCompat.SearchResult.Subtitle" />
     <style name="TextAppearance.AppCompat.SearchResult.Title" parent="@style/Base.TextAppearance.AppCompat.SearchResult.Title" />
     <style name="TextAppearance.AppCompat.Small" parent="@style/Base.TextAppearance.AppCompat.Small" />
@@ -1330,6 +1400,8 @@
     <style name="TextAppearance.AppCompat.Widget.ActionMode.Title" parent="@style/Base.TextAppearance.AppCompat.Widget.ActionMode.Title" />
     <style name="TextAppearance.AppCompat.Widget.ActionMode.Title.Inverse" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title" />
     <style name="TextAppearance.AppCompat.Widget.Button" parent="@style/Base.TextAppearance.AppCompat.Widget.Button" />
+    <style name="TextAppearance.AppCompat.Widget.Button.Borderless.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored" />
+    <style name="TextAppearance.AppCompat.Widget.Button.Colored" parent="@style/Base.TextAppearance.AppCompat.Widget.Button.Colored" />
     <style name="TextAppearance.AppCompat.Widget.Button.Inverse" parent="@style/Base.TextAppearance.AppCompat.Widget.Button.Inverse" />
     <style name="TextAppearance.AppCompat.Widget.DropDownItem" parent="@style/Base.TextAppearance.AppCompat.Widget.DropDownItem" />
     <style name="TextAppearance.AppCompat.Widget.PopupMenu.Header" parent="@style/Base.TextAppearance.AppCompat.Widget.PopupMenu.Header" />
@@ -1444,24 +1516,63 @@
         <item name="android:backgroundDimEnabled">false</item>
     </style>
     <style name="Theme.MediaRouter" parent="">
+        <item name="android:windowNoTitle">false</item>
+        <item name="MediaRouteControllerWindowBackground">@drawable/mr_dialog_material_background_dark</item>
+        <item name="mediaRouteAudioTrackDrawable">@drawable/ic_audiotrack</item>
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.MediaRouteButton</item>
         <item name="mediaRouteCastDrawable">@drawable/mr_ic_cast_dark</item>
-        <item name="mediaRouteConnectingDrawable">@drawable/mr_ic_media_route_connecting_mono_dark</item>
+        <item name="mediaRouteChooserPrimaryTextStyle">@style/Widget.MediaRouter.ChooserText.Primary.Dark</item>
+        <item name="mediaRouteChooserSecondaryTextStyle">@style/Widget.MediaRouter.ChooserText.Secondary.Dark</item>
+        <item name="mediaRouteCloseDrawable">@drawable/mr_ic_close_dark</item>
+        <item name="mediaRouteConnectingDrawable">@drawable/mr_ic_media_route_connecting_dark</item>
+        <item name="mediaRouteControllerPrimaryTextStyle">@style/Widget.MediaRouter.ControllerText.Primary.Dark</item>
+        <item name="mediaRouteControllerSecondaryTextStyle">@style/Widget.MediaRouter.ControllerText.Secondary.Dark</item>
+        <item name="mediaRouteControllerTitleTextStyle">@style/Widget.MediaRouter.ControllerText.Title.Dark</item>
+        <item name="mediaRouteDefaultIconDrawable">@drawable/ic_cast_white</item>
         <item name="mediaRouteOffDrawable">@drawable/ic_media_route_off_mono_dark</item>
-        <item name="mediaRouteOnDrawable">@drawable/ic_media_route_on_mono_dark</item>
+        <item name="mediaRouteOnDrawable">@drawable/mr_ic_media_route_on_dark</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_dark</item>
         <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_dark</item>
-        <item name="mediaRouteSettingsDrawable">@drawable/mr_ic_settings_dark</item>
+        <item name="mediaRouteSpeakerGroupIconDrawable">@drawable/ic_speaker_group_dark</item>
+        <item name="mediaRouteSpeakerIconDrawable">@drawable/ic_speaker_dark</item>
+        <item name="mediaRouteTvIconDrawable">@drawable/ic_tv_dark</item>
     </style>
-    <style name="Theme.MediaRouter.Light" parent="">
+    <style name="Theme.MediaRouter.Light" parent="@style/Theme.MediaRouter">
+        <item name="MediaRouteControllerWindowBackground">@drawable/mr_dialog_material_background_light</item>
+        <item name="mediaRouteAudioTrackDrawable">@drawable/mr_ic_audiotrack_light</item>
         <item name="mediaRouteButtonStyle">@style/Widget.MediaRouter.Light.MediaRouteButton</item>
         <item name="mediaRouteCastDrawable">@drawable/mr_ic_cast_light</item>
-        <item name="mediaRouteConnectingDrawable">@drawable/mr_ic_media_route_connecting_mono_light</item>
+        <item name="mediaRouteChooserPrimaryTextStyle">@style/Widget.MediaRouter.ChooserText.Primary.Light</item>
+        <item name="mediaRouteChooserSecondaryTextStyle">@style/Widget.MediaRouter.ChooserText.Secondary.Light</item>
+        <item name="mediaRouteCloseDrawable">@drawable/mr_ic_close_light</item>
+        <item name="mediaRouteConnectingDrawable">@drawable/mr_ic_media_route_connecting_light</item>
+        <item name="mediaRouteControllerPrimaryTextStyle">@style/Widget.MediaRouter.ControllerText.Primary.Light</item>
+        <item name="mediaRouteControllerSecondaryTextStyle">@style/Widget.MediaRouter.ControllerText.Secondary.Light</item>
+        <item name="mediaRouteControllerTitleTextStyle">@style/Widget.MediaRouter.ControllerText.Title.Light</item>
+        <item name="mediaRouteDefaultIconDrawable">@drawable/ic_cast_grey</item>
         <item name="mediaRouteOffDrawable">@drawable/ic_cast_off_light</item>
-        <item name="mediaRouteOnDrawable">@drawable/ic_cast_on_light</item>
+        <item name="mediaRouteOnDrawable">@drawable/mr_ic_media_route_on_light</item>
         <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_light</item>
         <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_light</item>
-        <item name="mediaRouteSettingsDrawable">@drawable/mr_ic_settings_light</item>
+        <item name="mediaRouteSpeakerGroupIconDrawable">@drawable/ic_speaker_group_light</item>
+        <item name="mediaRouteSpeakerIconDrawable">@drawable/ic_speaker_light</item>
+        <item name="mediaRouteTvIconDrawable">@drawable/ic_tv_light</item>
+    </style>
+    <style name="Theme.MediaRouter.Light.DarkControlPanel" parent="@style/Theme.MediaRouter.Light">
+        <item name="mediaRouteAudioTrackDrawable">@drawable/ic_audiotrack</item>
+        <item name="mediaRouteCastDrawable">@drawable/mr_ic_cast_dark</item>
+        <item name="mediaRouteControllerPrimaryTextStyle">@style/Widget.MediaRouter.ControllerText.Primary.Dark</item>
+        <item name="mediaRouteControllerSecondaryTextStyle">@style/Widget.MediaRouter.ControllerText.Secondary.Dark</item>
+        <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_dark</item>
+        <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_dark</item>
+    </style>
+    <style name="Theme.MediaRouter.LightControlPanel" parent="@style/Theme.MediaRouter">
+        <item name="mediaRouteAudioTrackDrawable">@drawable/mr_ic_audiotrack_light</item>
+        <item name="mediaRouteCastDrawable">@drawable/mr_ic_cast_light</item>
+        <item name="mediaRouteControllerPrimaryTextStyle">@style/Widget.MediaRouter.ControllerText.Primary.Light</item>
+        <item name="mediaRouteControllerSecondaryTextStyle">@style/Widget.MediaRouter.ControllerText.Secondary.Light</item>
+        <item name="mediaRoutePauseDrawable">@drawable/mr_ic_pause_light</item>
+        <item name="mediaRoutePlayDrawable">@drawable/mr_ic_play_light</item>
     </style>
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat" />
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />
@@ -1624,20 +1735,61 @@
         <item name="passwordToggleDrawable">@drawable/design_ic_visibility</item>
         <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
     </style>
+    <style name="Widget.MediaRouter.ChooserText" parent="">
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Primary" parent="@style/Widget.MediaRouter.ChooserText">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Primary.Dark" parent="@style/Widget.MediaRouter.ChooserText.Primary">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Primary.Light" parent="@style/Widget.MediaRouter.ChooserText.Primary">
+        <item name="android:textColor">#de000000</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Secondary" parent="@style/Widget.MediaRouter.ChooserText">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Secondary.Dark" parent="@style/Widget.MediaRouter.ChooserText.Secondary">
+        <item name="android:textColor">#8affffff</item>
+    </style>
+    <style name="Widget.MediaRouter.ChooserText.Secondary.Light" parent="@style/Widget.MediaRouter.ChooserText.Secondary">
+        <item name="android:textColor">#8a000000</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText" parent="@style/Widget.MediaRouter.ChooserText" />
+    <style name="Widget.MediaRouter.ControllerText.Primary" parent="@style/Widget.MediaRouter.ControllerText">
+        <item name="android:textSize">16.0sp</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Primary.Dark" parent="@style/Widget.MediaRouter.ControllerText.Primary">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Primary.Light" parent="@style/Widget.MediaRouter.ControllerText.Primary">
+        <item name="android:textColor">#de000000</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Secondary" parent="@style/Widget.MediaRouter.ControllerText">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Secondary.Dark" parent="@style/Widget.MediaRouter.ControllerText.Secondary">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Secondary.Light" parent="@style/Widget.MediaRouter.ControllerText.Secondary">
+        <item name="android:textColor">#de000000</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Title" parent="@style/Widget.MediaRouter.ControllerText">
+        <item name="android:textSize">20.0sp</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Title.Dark" parent="@style/Widget.MediaRouter.ControllerText.Title">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Widget.MediaRouter.ControllerText.Title.Light" parent="@style/Widget.MediaRouter.ControllerText.Title">
+        <item name="android:textColor">#de000000</item>
+    </style>
     <style name="Widget.MediaRouter.Light.MediaRouteButton" parent="@style/Widget.AppCompat.Light.ActionButton">
-        <item name="android:padding">0.0dip</item>
-        <item name="android:focusable">true</item>
-        <item name="android:minWidth">56.0dip</item>
-        <item name="android:minHeight">48.0dip</item>
-        <item name="android:contentDescription">@string/mr_media_route_button_content_description</item>
+        <item name="android:contentDescription">@string/mr_button_content_description</item>
         <item name="externalRouteEnabledDrawable">@drawable/mr_ic_media_route_mono_light</item>
     </style>
     <style name="Widget.MediaRouter.MediaRouteButton" parent="@style/Widget.AppCompat.ActionButton">
-        <item name="android:padding">0.0dip</item>
-        <item name="android:focusable">true</item>
-        <item name="android:minWidth">56.0dip</item>
-        <item name="android:minHeight">48.0dip</item>
-        <item name="android:contentDescription">@string/mr_media_route_button_content_description</item>
+        <item name="android:contentDescription">@string/mr_button_content_description</item>
         <item name="externalRouteEnabledDrawable">@drawable/mr_ic_media_route_mono_dark</item>
     </style>
     <style name="com_facebook_activity_theme" parent="@style/Theme.AppCompat.NoActionBar">
@@ -1650,6 +1802,15 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="com_facebook_auth_dialog_instructions_textview">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@color/com_facebook_device_auth_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">false</item>
     </style>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">
         <item name="android:textSize">14.0dip</item>
@@ -1676,7 +1837,11 @@
         <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
     </style>
     <style name="com_facebook_loginview_default_style" parent="@style/com_facebook_button">
-        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:background">@drawable/com_facebook_button_login_background</item>
+        <item name="android:paddingLeft">6.0dip</item>
+        <item name="android:paddingRight">6.0dip</item>
+        <item name="android:drawablePadding">5.0dip</item>
     </style>
     <style name="com_facebook_loginview_silver_style" parent="@style/com_facebook_loginview_default_style">
         <item name="android:textColor">#ff4b5164</item>

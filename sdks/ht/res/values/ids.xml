@@ -4,6 +4,15 @@
     <item type="id" name="action_bar_spinner" />
     <item type="id" name="action_menu_divider" />
     <item type="id" name="action_menu_presenter" />
+    <item type="id" name="cast_button_type_closed_caption" />
+    <item type="id" name="cast_button_type_custom" />
+    <item type="id" name="cast_button_type_empty" />
+    <item type="id" name="cast_button_type_forward_30_seconds" />
+    <item type="id" name="cast_button_type_mute_toggle" />
+    <item type="id" name="cast_button_type_play_pause_toggle" />
+    <item type="id" name="cast_button_type_rewind_30_seconds" />
+    <item type="id" name="cast_button_type_skip_next" />
+    <item type="id" name="cast_button_type_skip_previous" />
     <item type="id" name="cast_featurehighlight_help_text_body_view" />
     <item type="id" name="cast_featurehighlight_help_text_header_view" />
     <item type="id" name="cast_featurehighlight_view" />
@@ -29,16 +38,18 @@
     <item type="id" name="buttonPanel">false</item>
     <item type="id" name="spacer">false</item>
     <item type="id" name="parentPanel">false</item>
-    <item type="id" name="topPanel">false</item>
-    <item type="id" name="title_template">false</item>
-    <item type="id" name="alertTitle">false</item>
     <item type="id" name="contentPanel">false</item>
     <item type="id" name="scrollIndicatorUp">false</item>
     <item type="id" name="scrollView">false</item>
+    <item type="id" name="textSpacerNoTitle">false</item>
     <item type="id" name="textSpacerNoButtons">false</item>
     <item type="id" name="scrollIndicatorDown">false</item>
     <item type="id" name="customPanel">false</item>
     <item type="id" name="custom">false</item>
+    <item type="id" name="topPanel">false</item>
+    <item type="id" name="title_template">false</item>
+    <item type="id" name="alertTitle">false</item>
+    <item type="id" name="titleDividerNoCustom">false</item>
     <item type="id" name="expanded_menu">false</item>
     <item type="id" name="checkbox">false</item>
     <item type="id" name="shortcut">false</item>
@@ -166,12 +177,33 @@
     <item type="id" name="top_up_back">false</item>
     <item type="id" name="top_up_order_manager">false</item>
     <item type="id" name="top_up_webview">false</item>
+    <item type="id" name="expanded_controller_layout">false</item>
+    <item type="id" name="background_image_view">false</item>
+    <item type="id" name="blurred_background_image_view">false</item>
+    <item type="id" name="toolbar">false</item>
+    <item type="id" name="controllers">false</item>
+    <item type="id" name="background_place_holder_image_view">false</item>
+    <item type="id" name="ad_container">false</item>
+    <item type="id" name="ad_label">false</item>
+    <item type="id" name="ad_in_progress_label">false</item>
+    <item type="id" name="ad_image_view">false</item>
+    <item type="id" name="loading_indicator">false</item>
+    <item type="id" name="status_text">false</item>
+    <item type="id" name="seek_bar_controls">false</item>
+    <item type="id" name="start_text">false</item>
+    <item type="id" name="end_text">false</item>
+    <item type="id" name="live_stream_indicator">false</item>
+    <item type="id" name="seek_bar">false</item>
+    <item type="id" name="live_stream_seek_bar">false</item>
+    <item type="id" name="button_0">false</item>
+    <item type="id" name="button_1">false</item>
+    <item type="id" name="button_play_pause_toggle">false</item>
+    <item type="id" name="button_2">false</item>
+    <item type="id" name="button_3">false</item>
     <item type="id" name="textTitle">false</item>
     <item type="id" name="container_all">false</item>
     <item type="id" name="container_current">false</item>
     <item type="id" name="icon_view">false</item>
-    <item type="id" name="play_pause">false</item>
-    <item type="id" name="loading_view">false</item>
     <item type="id" name="title_view">false</item>
     <item type="id" name="subtitle_view">false</item>
     <item type="id" name="progressBar">false</item>
@@ -228,6 +260,8 @@
     <item type="id" name="com_facebook_device_auth_instructions">false</item>
     <item type="id" name="cancel_button">false</item>
     <item type="id" name="com_facebook_login_activity_progress_bar">false</item>
+    <item type="id" name="com_facebook_smart_instructions_0">false</item>
+    <item type="id" name="com_facebook_smart_instructions_or">false</item>
     <item type="id" name="com_facebook_body_frame">false</item>
     <item type="id" name="com_facebook_tooltip_bubble_view_top_pointer">false</item>
     <item type="id" name="com_facebook_button_xout">false</item>
@@ -291,29 +325,51 @@
     <item type="id" name="size">false</item>
     <item type="id" name="iv_img">false</item>
     <item type="id" name="messenger_send_button">false</item>
-    <item type="id" name="media_route_list">false</item>
-    <item type="id" name="title_bar">false</item>
-    <item type="id" name="route_name">false</item>
-    <item type="id" name="settings">false</item>
-    <item type="id" name="media_route_control_frame">false</item>
-    <item type="id" name="default_control_frame">false</item>
-    <item type="id" name="art">false</item>
-    <item type="id" name="subtitle">false</item>
-    <item type="id" name="media_route_volume_layout">false</item>
-    <item type="id" name="media_route_volume_slider">false</item>
-    <item type="id" name="buttons">false</item>
-    <item type="id" name="disconnect">false</item>
-    <item type="id" name="stop">false</item>
+    <item type="id" name="mr_chooser_list">false</item>
+    <item type="id" name="mr_chooser_route_icon">false</item>
+    <item type="id" name="mr_chooser_route_name">false</item>
+    <item type="id" name="mr_chooser_route_desc">false</item>
+    <item type="id" name="mr_expandable_area">false</item>
+    <item type="id" name="mr_dialog_area">false</item>
+    <item type="id" name="mr_title_bar">false</item>
+    <item type="id" name="mr_name">false</item>
+    <item type="id" name="mr_close">false</item>
+    <item type="id" name="mr_custom_control">false</item>
+    <item type="id" name="mr_default_control">false</item>
+    <item type="id" name="mr_art">false</item>
+    <item type="id" name="mr_media_main_control">false</item>
+    <item type="id" name="mr_playback_control">false</item>
+    <item type="id" name="mr_control_divider">false</item>
+    <item type="id" name="mr_volume_control">false</item>
+    <item type="id" name="mr_volume_group_list">false</item>
+    <item type="id" name="volume_item_container">false</item>
+    <item type="id" name="mr_volume_item_icon">false</item>
+    <item type="id" name="mr_volume_slider">false</item>
+    <item type="id" name="mr_control_play_pause">false</item>
+    <item type="id" name="mr_control_title_container">false</item>
+    <item type="id" name="mr_control_title">false</item>
+    <item type="id" name="mr_control_subtitle">false</item>
+    <item type="id" name="mr_group_expand_collapse">false</item>
+    <item type="id" name="action_container">false</item>
+    <item type="id" name="action_image">false</item>
+    <item type="id" name="action_text">false</item>
     <item type="id" name="action0">false</item>
     <item type="id" name="cancel_action">false</item>
     <item type="id" name="status_bar_latest_event_content">false</item>
     <item type="id" name="media_actions">false</item>
     <item type="id" name="action_divider">false</item>
-    <item type="id" name="line1">false</item>
+    <item type="id" name="notification_main_column_container">false</item>
+    <item type="id" name="notification_main_column">false</item>
+    <item type="id" name="right_side">false</item>
     <item type="id" name="time">false</item>
     <item type="id" name="chronometer">false</item>
-    <item type="id" name="line3">false</item>
     <item type="id" name="info">false</item>
+    <item type="id" name="right_icon">false</item>
+    <item type="id" name="notification_background">false</item>
+    <item type="id" name="actions">false</item>
+    <item type="id" name="icon_group">false</item>
+    <item type="id" name="line1">false</item>
+    <item type="id" name="line3">false</item>
     <item type="id" name="end_padder">false</item>
     <item type="id" name="place_autocomplete_search_button">false</item>
     <item type="id" name="place_autocomplete_search_input">false</item>

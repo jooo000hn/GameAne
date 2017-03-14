@@ -6,7 +6,7 @@
         <ImageView android:id="@id/item_online_problem_list_show" android:layout_width="@dimen/layout_25" android:layout_height="@dimen/layout_18" android:layout_marginRight="@dimen/layout_10" android:src="@mipmap/icon_problem_down" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
     </RelativeLayout>
     <LinearLayout android:orientation="vertical" android:id="@id/item_online_problem_list_layout_show" android:background="@color/colorEditBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/item_online_problem_list_layout_hide">
-        <TextView android:textSize="@dimen/text_17" android:textColor="@color/colorHintText" android:id="@id/item_online_problem_list_content" android:padding="@dimen/layout_10" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="sdasdasddddddd" />
+        <TextView android:textSize="@dimen/text_17" android:textColor="@color/colorHintText" android:id="@id/item_online_problem_list_content" android:padding="@dimen/layout_10" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         <ImageView android:layout_gravity="end" android:id="@id/item_online_problem_list_hide" android:layout_width="@dimen/layout_25" android:layout_height="@dimen/layout_18" android:layout_marginRight="@dimen/layout_10" android:layout_marginBottom="@dimen/layout_10" android:src="@mipmap/icon_problem_up" />
     </LinearLayout>
 </RelativeLayout>

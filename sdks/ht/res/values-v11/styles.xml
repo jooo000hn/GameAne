@@ -37,8 +37,28 @@
         <item name="android:textColorLink">?android:textColorLinkInverse</item>
     </style>
     <style name="Base.Theme.AppCompat.Dialog" parent="@style/Base.V11.Theme.AppCompat.Dialog" />
+    <style name="Base.Theme.AppCompat.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.Theme.AppCompat.Light.Dialog" parent="@style/Base.V11.Theme.AppCompat.Light.Dialog" />
+    <style name="Base.Theme.AppCompat.Light.Dialog.Alert" parent="@style/Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
+    <style name="Base.Theme.AppCompat.Light.Dialog.MinWidth" parent="@style/Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V11.ThemeOverlay.AppCompat.Dialog" />
+    <style name="Base.ThemeOverlay.AppCompat.Dialog.Alert" parent="@style/Base.ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+    </style>
     <style name="Base.Widget.AppCompat.ProgressBar" parent="@android:style/Widget.Holo.ProgressBar" />
     <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="@android:style/Widget.Holo.ProgressBar.Horizontal" />
     <style name="Platform.AppCompat" parent="@style/Platform.V11.AppCompat" />
@@ -72,7 +92,7 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_dark</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_light</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_light</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
@@ -82,7 +102,7 @@
         <item name="android:windowBackground">@color/background_material_dark</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_dark</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
         <item name="android:textColorLink">?colorAccent</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_light</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_dark</item>
@@ -115,7 +135,7 @@
         <item name="android:textColorSecondary">@color/abc_secondary_text_material_light</item>
         <item name="android:textColorPrimaryInverse">@color/abc_primary_text_material_dark</item>
         <item name="android:textColorSecondaryInverse">@color/abc_secondary_text_material_dark</item>
-        <item name="android:textColorHintInverse">@color/hint_foreground_material_dark</item>
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
         <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:textAppearanceMedium">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textAppearanceSmall">@style/TextAppearance.AppCompat.Small</item>
@@ -125,7 +145,7 @@
         <item name="android:windowBackground">@color/background_material_light</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:textColorHighlight">@color/highlighted_text_material_light</item>
-        <item name="android:textColorHint">@color/hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
         <item name="android:textColorLink">?colorAccent</item>
         <item name="android:colorForegroundInverse">@color/foreground_material_dark</item>
         <item name="android:textColorTertiary">@color/abc_secondary_text_material_light</item>

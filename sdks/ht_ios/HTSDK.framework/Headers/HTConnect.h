@@ -74,6 +74,13 @@
  */
 + (void)inviteFB:(NSString *)title message:(NSString *)msg inviteInfoBlock:(void(^)(NSDictionary*inviteInfoDic))inviteInfoBlock;
 
+/*
+ 切换账号，修改密码游戏重新登录
+ 
+ */
+
++ (void)gameRestart:(void(^)(NSDictionary *dic))restarBlock;
+
 
 
 
@@ -83,6 +90,7 @@
 @property(nonatomic,copy)void(^inviteFB)(NSDictionary*);
 @property(nonatomic,copy)void(^changeAccount)(NSDictionary*account,NSDictionary*faceboolInfo);
 @property (nonatomic,copy)void(^loginBackBlock)(NSDictionary*loginInfo,NSDictionary*FaceBookInfo);
+@property(nonatomic,copy)void(^changePassword)(NSDictionary *password);
 @property (nonatomic,strong)HTAssistiveTouch*mywindow;
 
 @end

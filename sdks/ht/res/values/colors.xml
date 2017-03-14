@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="notification_action_color_filter">#ffffffff</color>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#ff7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -21,16 +22,21 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="cardview_dark_background">#ff202020</color>
-    <color name="cardview_light_background">#fffafafa</color>
+    <color name="cardview_dark_background">#ff424242</color>
+    <color name="cardview_light_background">#ffffffff</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="cast_expanded_controller_ad_container_white_stripe_color">#1affffff</color>
+    <color name="cast_expanded_controller_ad_label_background_color">#2f000000</color>
+    <color name="cast_expanded_controller_background_color">#ff000000</color>
+    <color name="cast_expanded_controller_progress_text_color">#e5ffffff</color>
+    <color name="cast_expanded_controller_seek_bar_progress_background_tint_color">#46ffffff</color>
+    <color name="cast_expanded_controller_text_color">#ffffffff</color>
     <color name="cast_intro_overlay_background_color">#cc000000</color>
     <color name="cast_intro_overlay_button_background_color">#bb33b5e5</color>
     <color name="cast_libraries_material_featurehighlight_outer_highlight_default_color">#ff2196f3</color>
     <color name="cast_libraries_material_featurehighlight_text_body_color">#ffffffff</color>
     <color name="cast_libraries_material_featurehighlight_text_header_color">#ffffffff</color>
-    <color name="cast_mini_controller_main_background">#ffffffff</color>
     <color name="colorAccent">#ffff4081</color>
     <color name="colorBackground">#ffde6447</color>
     <color name="colorBackground1">#fff7f5f6</color>
@@ -50,16 +56,18 @@
     <color name="com_facebook_button_background_color_pressed">#ff2f477a</color>
     <color name="com_facebook_button_background_color_selected">#ff7c8fc8</color>
     <color name="com_facebook_button_border_color_focused">#ffdedee6</color>
+    <color name="com_facebook_button_login_background_color">#ff4267b2</color>
     <color name="com_facebook_button_login_silver_background_color">#fff4f6f8</color>
     <color name="com_facebook_button_login_silver_background_color_pressed">#ffe9eaf0</color>
     <color name="com_facebook_button_send_background_color">@color/com_facebook_messenger_blue</color>
     <color name="com_facebook_button_send_background_color_pressed">#ff006fff</color>
-    <color name="com_facebook_device_auth_text">#ff797e87</color>
+    <color name="com_facebook_device_auth_text">#ff90949c</color>
     <color name="com_facebook_likeboxcountview_border_color">#ff6a7180</color>
     <color name="com_facebook_likeboxcountview_text_color">#ff6a7180</color>
     <color name="com_facebook_likeview_text_color">#ff6a7180</color>
     <color name="com_facebook_messenger_blue">#ff0084ff</color>
     <color name="com_facebook_share_button_text_color">#ffffffff</color>
+    <color name="com_smart_login_code">#ff3c6499</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1f000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -68,14 +76,6 @@
     <color name="common_google_signin_btn_text_light_disabled">#1f000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
-    <color name="common_plus_signin_btn_text_dark_default">@android:color/white</color>
-    <color name="common_plus_signin_btn_text_dark_disabled">#ffaaaaaa</color>
-    <color name="common_plus_signin_btn_text_dark_focused">@android:color/white</color>
-    <color name="common_plus_signin_btn_text_dark_pressed">@android:color/white</color>
-    <color name="common_plus_signin_btn_text_light_default">#ff737373</color>
-    <color name="common_plus_signin_btn_text_light_disabled">#ffaaaaaa</color>
-    <color name="common_plus_signin_btn_text_light_focused">#ff737373</color>
-    <color name="common_plus_signin_btn_text_light_pressed">#de000000</color>
     <color name="dark">#9f111111</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
@@ -99,8 +99,6 @@
     <color name="google_yellow">#ffffa700</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
-    <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
-    <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -113,6 +111,8 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
     <color name="oval_brown">#ccfd8225</color>
     <color name="oval_light_blue">#ff427fed</color>
     <color name="oval_light_green">#ff67cdb7</color>
@@ -161,8 +161,6 @@
     <color name="wallet_bright_foreground_holo_light">#ff000000</color>
     <color name="wallet_dim_foreground_disabled_holo_dark">#80bebebe</color>
     <color name="wallet_dim_foreground_holo_dark">#ffbebebe</color>
-    <color name="wallet_dim_foreground_inverse_disabled_holo_dark">#80323232</color>
-    <color name="wallet_dim_foreground_inverse_holo_dark">#ff323232</color>
     <color name="wallet_highlighted_text_holo_dark">#6633b5e5</color>
     <color name="wallet_highlighted_text_holo_light">#6633b5e5</color>
     <color name="wallet_hint_foreground_holo_dark">#ff808080</color>

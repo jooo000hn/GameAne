@@ -7,17 +7,31 @@
     <attr name="reverb_back_arrow_src" format="reference" />
     <attr name="reverb_content_margin_top" format="dimension" />
     <attr name="reverb_text_all_caps" format="boolean" />
+    <attr name="MediaRouteControllerWindowBackground" format="reference" />
+    <attr name="castExpandedControllerToolbarStyle" format="reference" />
     <attr name="drawerArrowStyle" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="isLightTheme" format="boolean" />
+    <attr name="mediaRouteAudioTrackDrawable" format="reference" />
     <attr name="mediaRouteButtonStyle" format="reference" />
     <attr name="mediaRouteCastDrawable" format="reference" />
+    <attr name="mediaRouteChooserPrimaryTextStyle" format="reference" />
+    <attr name="mediaRouteChooserSecondaryTextStyle" format="reference" />
+    <attr name="mediaRouteCloseDrawable" format="reference" />
+    <attr name="mediaRouteCollapseGroupDrawable" format="reference" />
     <attr name="mediaRouteConnectingDrawable" format="reference" />
+    <attr name="mediaRouteControllerPrimaryTextStyle" format="reference" />
+    <attr name="mediaRouteControllerSecondaryTextStyle" format="reference" />
+    <attr name="mediaRouteControllerTitleTextStyle" format="reference" />
+    <attr name="mediaRouteDefaultIconDrawable" format="reference" />
+    <attr name="mediaRouteExpandGroupDrawable" format="reference" />
     <attr name="mediaRouteOffDrawable" format="reference" />
     <attr name="mediaRouteOnDrawable" format="reference" />
     <attr name="mediaRoutePauseDrawable" format="reference" />
     <attr name="mediaRoutePlayDrawable" format="reference" />
-    <attr name="mediaRouteSettingsDrawable" format="reference" />
+    <attr name="mediaRouteSpeakerGroupIconDrawable" format="reference" />
+    <attr name="mediaRouteSpeakerIconDrawable" format="reference" />
+    <attr name="mediaRouteTvIconDrawable" format="reference" />
     <attr name="title" format="string" />
     <attr name="navigationMode">
         <enum name="listMode" value="1" />
@@ -68,6 +82,7 @@
     <attr name="multiChoiceItemLayout" format="reference" />
     <attr name="singleChoiceItemLayout" format="reference" />
     <attr name="listItemLayout" format="reference" />
+    <attr name="showTitle" format="boolean" />
     <attr name="expanded" format="boolean" />
     <attr name="state_collapsed" format="boolean" />
     <attr name="state_collapsible" format="boolean" />
@@ -225,6 +240,8 @@
     <attr name="contentPaddingRight" format="dimension" />
     <attr name="contentPaddingTop" format="dimension" />
     <attr name="contentPaddingBottom" format="dimension" />
+    <attr name="castSeekBarProgressDrawable" format="reference" />
+    <attr name="castSeekBarThumbDrawable" format="reference" />
     <attr name="castBackgroundColor" format="reference|color" />
     <attr name="castButtonBackgroundColor" format="reference|color" />
     <attr name="castButtonTextAppearance" format="reference" />
@@ -233,6 +250,22 @@
     <attr name="castFocusRadius" format="reference|dimension" />
     <attr name="castShowImageThumbnail" format="boolean" />
     <attr name="castSubtitleTextAppearance" format="reference" />
+    <attr name="castControlButtons" format="reference" />
+    <attr name="castBackground" format="reference|color" />
+    <attr name="castProgressBarColor" format="color" />
+    <attr name="castButtonColor" format="reference|color" />
+    <attr name="castPlayButtonDrawable" format="reference" />
+    <attr name="castPauseButtonDrawable" format="reference" />
+    <attr name="castStopButtonDrawable" format="reference" />
+    <attr name="castLargePlayButtonDrawable" format="reference" />
+    <attr name="castLargePauseButtonDrawable" format="reference" />
+    <attr name="castLargeStopButtonDrawable" format="reference" />
+    <attr name="castSkipPreviousButtonDrawable" format="reference" />
+    <attr name="castSkipNextButtonDrawable" format="reference" />
+    <attr name="castRewind30ButtonDrawable" format="reference" />
+    <attr name="castForward30ButtonDrawable" format="reference" />
+    <attr name="castMuteToggleButtonDrawable" format="reference" />
+    <attr name="castClosedCaptionsButtonDrawable" format="reference" />
     <attr name="expandedTitleMargin" format="dimension" />
     <attr name="expandedTitleMarginStart" format="dimension" />
     <attr name="expandedTitleMarginTop" format="dimension" />
@@ -334,9 +367,11 @@
     <attr name="trimmable" format="boolean" />
     <attr name="schemaOrgType" format="string" />
     <attr name="semanticallySearchable" format="boolean" />
+    <attr name="documentMaxAgeSecs" format="integer" />
     <attr name="perAccountTemplate" format="boolean" />
     <attr name="castIntroOverlayStyle" format="reference" />
     <attr name="castMiniControllerStyle" format="reference" />
+    <attr name="castExpandedControllerStyle" format="reference" />
     <attr name="windowTransitionStyle">
         <enum name="none" value="2" />
         <enum name="slide" value="1" />
@@ -370,8 +405,8 @@
     <attr name="behavior_autoHide" format="boolean" />
     <attr name="foregroundInsidePadding" format="boolean" />
     <attr name="searchEnabled" format="boolean" />
-    <attr name="searchLabel" format="string" localization="suggested" />
-    <attr name="settingsDescription" format="string" localization="suggested" />
+    <attr name="searchLabel" format="string" />
+    <attr name="settingsDescription" format="string" />
     <attr name="defaultIntentAction" format="string" />
     <attr name="defaultIntentData" format="string" />
     <attr name="defaultIntentActivity" format="string" />
@@ -388,7 +423,7 @@
         <enum name="text2" value="1" />
         <enum name="thing_proto" value="9" />
     </attr>
-    <attr name="sectionContent" format="string" localization="suggested" />
+    <attr name="sectionContent" format="string" />
     <attr name="inputEnabled" format="boolean" />
     <attr name="sourceClass">
         <enum name="contact" value="1" />
@@ -437,6 +472,12 @@
     <attr name="zOrderOnTop" format="boolean" />
     <attr name="uiMapToolbar" format="boolean" />
     <attr name="ambientEnabled" format="boolean" />
+    <attr name="cameraMinZoomPreference" format="float" />
+    <attr name="cameraMaxZoomPreference" format="float" />
+    <attr name="latLngBoundsSouthWestLatitude" format="float" />
+    <attr name="latLngBoundsSouthWestLongitude" format="float" />
+    <attr name="latLngBoundsNorthEastLatitude" format="float" />
+    <attr name="latLngBoundsNorthEastLongitude" format="float" />
     <attr name="externalRouteEnabledDrawable" format="reference" />
     <attr name="showAsAction">
         <flag name="always" value="0x00000002" />
@@ -458,6 +499,8 @@
     <attr name="headerLayout" format="reference" />
     <attr name="overlapAnchor" format="boolean" />
     <attr name="state_above_anchor" format="boolean" />
+    <attr name="paddingBottomNoButtons" format="dimension" />
+    <attr name="paddingTopNoTitle" format="dimension" />
     <attr name="layoutManager" format="string" />
     <attr name="spanCount" format="integer" />
     <attr name="reverseLayout" format="boolean" />
@@ -479,6 +522,7 @@
     <attr name="submitBackground" format="reference" />
     <attr name="sectionId" format="string" />
     <attr name="sectionFormat">
+        <enum name="date" value="4" />
         <enum name="html" value="1" />
         <enum name="plain" value="0" />
         <enum name="rfc822" value="2" />

@@ -9,22 +9,8 @@
     <style name="Base.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V21.ThemeOverlay.AppCompat.Dialog" />
     <style name="Base.Widget.AppCompat.ProgressBar" parent="@android:style/Widget.Material.ProgressBar" />
     <style name="Base.Widget.AppCompat.ProgressBar.Horizontal" parent="@android:style/Widget.Material.ProgressBar.Horizontal" />
-    <style name="Platform.AppCompat" parent="@android:style/Theme.Material">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:textColorLink">?android:colorAccent</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:buttonBarStyle">?buttonBarStyle</item>
-        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
-        <item name="android:textColorLinkInverse">?android:colorAccent</item>
-    </style>
-    <style name="Platform.AppCompat.Light" parent="@android:style/Theme.Material.Light">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:textColorLink">?android:colorAccent</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:buttonBarStyle">?buttonBarStyle</item>
-        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
-        <item name="android:textColorLinkInverse">?android:colorAccent</item>
-    </style>
+    <style name="Platform.AppCompat" parent="@style/Platform.V21.AppCompat" />
+    <style name="Platform.AppCompat.Light" parent="@style/Platform.V21.AppCompat.Light" />
     <style name="Theme.AppInvite.Preview.Base" parent="@android:style/Theme.Material.Light.DialogWhenLarge.NoActionBar" />
     <style name="Base.Widget.AppCompat.AutoCompleteTextView" parent="@android:style/Widget.Material.AutoCompleteTextView">
         <item name="android:background">?editTextBackground</item>
@@ -33,6 +19,8 @@
         <item name="android:background">?editTextBackground</item>
     </style>
     <style name="Base.TextAppearance.AppCompat.Button" parent="@android:style/TextAppearance.Material.Button" />
+    <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.Material.Notification" />
+    <style name="TextAppearance.AppCompat.Notification.Title" parent="@android:style/TextAppearance.Material.Notification.Title" />
     <style name="AccountKit.Button" parent="@style/Base.AccountKit.Button">
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:stateListAnimator">@null</item>
@@ -129,6 +117,28 @@
     </style>
     <style name="Platform.ThemeOverlay.AppCompat.Dark" parent="@style/Platform.ThemeOverlay.AppCompat" />
     <style name="Platform.ThemeOverlay.AppCompat.Light" parent="@style/Platform.ThemeOverlay.AppCompat" />
+    <style name="TextAppearance.AppCompat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info" />
+    <style name="TextAppearance.AppCompat.Notification.Info.Media" parent="@style/TextAppearance.AppCompat.Notification.Info">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Media" parent="@style/TextAppearance.AppCompat.Notification">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Time" parent="@android:style/TextAppearance.Material.Notification.Time" />
+    <style name="TextAppearance.AppCompat.Notification.Time.Media" parent="@style/TextAppearance.AppCompat.Notification.Time">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Title.Media" parent="@style/TextAppearance.AppCompat.Notification.Title">
+        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+    </style>
+    <style name="Widget.AppCompat.NotificationActionContainer" parent="">
+        <item name="android:background">@drawable/notification_action_background</item>
+    </style>
+    <style name="Widget.AppCompat.NotificationActionText" parent="">
+        <item name="android:textAppearance">?android:textAppearanceButton</item>
+        <item name="android:textSize">@dimen/notification_action_text_size</item>
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
     <style name="Widget.Design.AppBarLayout" parent="@style/Base.Widget.Design.AppBarLayout">
         <item name="android:stateListAnimator">@anim/design_appbar_state_list_animator</item>
     </style>
@@ -219,5 +229,21 @@
     </style>
     <style name="Base.V21.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V11.ThemeOverlay.AppCompat.Dialog">
         <item name="android:windowElevation">@dimen/abc_floating_window_z</item>
+    </style>
+    <style name="Platform.V21.AppCompat" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
+    </style>
+    <style name="Platform.V21.AppCompat.Light" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:textColorHintInverse">@color/abc_hint_foreground_material_dark</item>
+        <item name="android:textColorHint">@color/abc_hint_foreground_material_light</item>
+        <item name="android:textColorLink">?android:colorAccent</item>
+        <item name="android:buttonBarStyle">?buttonBarStyle</item>
+        <item name="android:buttonBarButtonStyle">?buttonBarButtonStyle</item>
+        <item name="android:textColorLinkInverse">?android:colorAccent</item>
     </style>
 </resources>

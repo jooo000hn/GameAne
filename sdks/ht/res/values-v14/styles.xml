@@ -7,6 +7,8 @@
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:textAllCaps">true</item>
     </style>
+    <style name="TextAppearance.AppCompat.Notification" parent="@android:style/TextAppearance.StatusBar.EventContent" />
+    <style name="TextAppearance.AppCompat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
     <style name="TextAppearance.StatusBar.EventContent" parent="@android:style/TextAppearance.StatusBar.EventContent" />
     <style name="TextAppearance.StatusBar.EventContent.Info" parent="@style/TextAppearance.StatusBar.EventContent" />
     <style name="TextAppearance.StatusBar.EventContent.Line2" parent="@style/TextAppearance.StatusBar.EventContent">
