@@ -53,16 +53,21 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 			
 			@Override
 			public void onSuccess(LoginResultBean info) {
+				System.out.println("login result:"+info);
 				if (info.getCode() == 0) {
-					JSONObject obj = new JSONObject();
-					try {
-						obj.put(UID, info.getData().getUid());
-						obj.put(UNAME, info.getData().getName());
-						obj.put(TOKEN, info.getData().getToken());
-					} catch (JSONException e) {
-						e.printStackTrace();
+					if (info.getData() == null) {
+						dispatchData(EVENT_LOGOUT, info.getMsg());
+					}else{
+						JSONObject obj = new JSONObject();
+						try {
+							obj.put(UID, info.getData().getUid());
+							obj.put(UNAME, info.getData().getName());
+							obj.put(TOKEN, info.getData().getToken());
+						} catch (JSONException e) {
+							e.printStackTrace();
+						}
+						dispatchData(EVENT_LOGIN, obj);
 					}
-					dispatchData(EVENT_LOGIN, obj);
 				}else if (info.getCode() == 2) {
 					dispatchData(EVENT_LOGOUT, info.getMsg());
 				}else {
