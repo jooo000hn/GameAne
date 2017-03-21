@@ -174,6 +174,9 @@
     <item type="id" name="login_and">false</item>
     <item type="id" name="regist_account_privacy">false</item>
     <item type="id" name="regist_account_button_regist">false</item>
+    <item type="id" name="button2">false</item>
+    <item type="id" name="btn_yao">false</item>
+    <item type="id" name="btn_fen">false</item>
     <item type="id" name="top_up_back">false</item>
     <item type="id" name="top_up_order_manager">false</item>
     <item type="id" name="top_up_webview">false</item>
