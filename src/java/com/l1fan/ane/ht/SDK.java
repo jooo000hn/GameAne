@@ -68,7 +68,7 @@ public class SDK extends SDKContext implements IabBroadcastListener {
 						}
 						dispatchData(EVENT_LOGIN, obj);
 					}
-				}else if (info.getCode() == 2) {
+				}else if (info.getCode() == 2 || info.getCode() == 3) {
 					dispatchData(EVENT_LOGOUT, info.getMsg());
 				}else {
 					dispatchError(EVENT_LOGIN, info.getCode()+":"+info.getMsg());
