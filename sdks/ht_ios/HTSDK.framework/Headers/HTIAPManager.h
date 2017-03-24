@@ -26,8 +26,15 @@
  *  @param productId 传入商品ID
  */
 - (void)requestProductWithId:(NSString *)productId;
+
+
+//新接口
+//- (void)requestProductWithId:(NSString *)productId withblock:(void(^)(NSString *str))block;
 /**
  *  与服务器连接失败重连的定时器
  */
 -(void)createTimer;
+
+
+
 @end
